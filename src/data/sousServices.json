@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "name": "سرير",
+    "prix": "150",
+    "avatar": "https://www.panhomestores.com/media/catalog/category/Bedroom_5.png",
+    "review_id": 1,
+    "pagination": {
+      "currentPage": 1,
+      "totalPages": 1,
+      "totalItems": 6
+    }
+  },
+  {
+    "id": 2,
+    "name": "مكتب",
+    "prix": "100",
+    "avatar": "https://images-cdn.ubuy.co.in/6590985619546e06b9282fc2-tribesigns-office-desk-63-inch-large.jpg",
+    "review_id": 1,
+    "pagination": {
+      "currentPage": 2,
+      "totalPages": 1,
+      "totalItems": 6
+    }
+  },
+  {
+    "id": 3,
+    "name": "الطلاق",
+    "prix": "999",
+    "avatar": "https://res.cloudinary.com/dm1huj94l/image/upload/v1609337793/articles-2020-12/vbilqh8uta9tgiftfgrc.jpg",
+    "review_id": 2,
+    "pagination": {
+      "currentPage": 1,
+      "totalPages": 1,
+      "totalItems": 6
+    }
+  },
+  {
+    "id": 4,
+    "name": "القتل",
+    "prix": "9999",
+    "avatar": "https://qanonbelaraby.com/wp-content/uploads/2024/01/%D8%AC%D8%B1%D9%8A%D9%85%D8%A9-%D8%A7%D9%84%D9%82%D8%AA%D9%84-950x600-1.jpg",
+    "review_id": 2,
+    "pagination": {
+      "currentPage": 2,
+      "totalPages": 1,
+      "totalItems": 6
+    }
+  },
+  {
+    "id": 5,
+    "name": "نقل الناس",
+    "prix": "50",
+    "avatar": "https://www.lavieeco.com/wp-content/uploads/2015/10/polamique-maroc-triporteur-transport.png",
+    "review_id": 3,
+    "pagination": {
+      "currentPage": 1,
+      "totalPages": 1,
+      "totalItems": 6
+    }
+  },
+  {
+    "id": 6,
+    "name": "نقل الأشياء",
+    "prix": "30",
+    "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWvnork6YQv4YFl1wptNnxD9nNVODN6cpWIg&s",
+    "review_id": 3,
+    "pagination": {
+      "currentPage": 2,
+      "totalPages": 1,
+      "totalItems": 6
+    }
+  }
+]
