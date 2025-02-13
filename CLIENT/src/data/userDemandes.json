@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "review": {
+      "id": 1,
+      "name": "أحمد علي",
+      "profession": "نجار",
+      "rating": 5,
+      "phoneNumber": "0679953235",
+      "avatar": "https://variety.com/wp-content/uploads/2024/06/5N7A0541-e1718042484447.jpg",
+      "localisation": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3323.9!2d-7.632!3d33.573!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzPCsDM0JzIyLjgiTiA3wrAzNyc1NS4yIlc!5e0!3m2!1sfr!2sma!4v1234567890"
+    },
+    "client_id": 1,
+    "rating": 5,
+    "evaluation": true,
+    "agreement": true
+  },
+  {
+    "id": 2,
+    "review": {
+      "id": 2,
+      "name": "فاطمة محمد",
+      "profession": "محامية",
+      "rating": 5,
+      "phoneNumber": "0679953234",
+      "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShwIjMMGGKfEHrawR7b3xPPj1mCVe0UFwyjQ&s",
+      "localisation": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3238.9!2d-5.833!3d35.786!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzXCsDQ3JzA5LjYiTiA1wrA0OSc1OC44Ilc!5e0!3m2!1sfr!2sma!4v1234567890"
+    },
+    "client_id": 1,
+    "rating": 0,
+    "evaluation": false,
+    "agreement": false
+  },
+  {
+    "id": 3,
+    "review": {
+      "id": 3,
+      "name": "يوسف حسين",
+      "profession": "Triporteur",
+      "rating": 3,
+      "phoneNumber": "0679953233",
+      "avatar": "https://static.vecteezy.com/ti/photos-gratuite/t1/5346410-gros-plan-portrait-de-souriant-beau-jeune-homme-caucasien-visage-regardant-camera-sur-fond-studio-gris-clair-isole-photo.jpg",
+      "localisation": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3307.5!2d-5.000!3d34.037!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzTCsDAyJzEzLjIiTiA1wrAwMCcwMC4wIlc!5e0!3m2!1sfr!2sma!4v1234567890"
+    },
+    "client_id": 1,
+    "rating": 2,
+    "evaluation": true,
+    "agreement": true
+  }
+]
