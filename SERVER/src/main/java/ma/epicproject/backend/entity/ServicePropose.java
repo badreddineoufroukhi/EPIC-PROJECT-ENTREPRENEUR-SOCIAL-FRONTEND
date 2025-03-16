@@ -42,7 +42,7 @@ public class ServicePropose extends AuditBusinessObject {
     private Ouvrier ouvrier;
 
     @Column(name = Constants.COLUMN_DESCRIPTION)
-    private String Description;
+    private String description;
 
     public static class Constants {
         public static final String TABLE_NAME = "service_propose";

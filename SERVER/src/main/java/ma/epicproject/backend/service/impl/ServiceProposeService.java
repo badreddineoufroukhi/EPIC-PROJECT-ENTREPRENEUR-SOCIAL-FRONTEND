@@ -4,6 +4,7 @@ package ma.epicproject.backend.service.impl;
 import ma.epicproject.backend.common.exception.EntityNotFoundException;
 import ma.epicproject.backend.criteria.ServiceProposeCriteria;
 import ma.epicproject.backend.dto.ServiceProposeDto;
+import ma.epicproject.backend.repository.IDemandeRepository;
 import ma.epicproject.backend.service.IServiceProposeService;
 import ma.epicproject.backend.specification.ServiceProposeSpecification;
 import ma.epicproject.backend.entity.ServicePropose;
@@ -25,6 +26,9 @@ public class ServiceProposeService implements IServiceProposeService {
 
     @Autowired
     private IServiceProposeRepository serviceProposeRepository;
+
+    @Autowired
+    private IDemandeRepository demandeRepository;
 
 
     /**
@@ -72,13 +76,11 @@ public class ServiceProposeService implements IServiceProposeService {
     @Transactional(propagation = Propagation.REQUIRED, rollbackFor = Exception.class, readOnly = false)
     public void deleteServicePropose(List<Long> idList) throws Exception {
 
-
         if (idList != null)
             for (Long id : idList) {
                 ServicePropose toBeDeleted = serviceProposeRepository.findById(id).orElseThrow(() -> new EntityNotFoundException("errors.notFound", new String[] { ServicePropose.class.getSimpleName(), id.toString() }));
-
+                demandeRepository.deleteByServiceProposeId(toBeDeleted.getId());
                 serviceProposeRepository.delete(toBeDeleted);
-
             }
     }
 

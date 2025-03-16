@@ -17,7 +17,7 @@ public class OuvrierDto extends UtilisateurDto {
     private String numeroTelephone;
     private Integer rating;
     private String ville;
-    private String Description;
+    private String description;
     private Boolean disponible;
 
 

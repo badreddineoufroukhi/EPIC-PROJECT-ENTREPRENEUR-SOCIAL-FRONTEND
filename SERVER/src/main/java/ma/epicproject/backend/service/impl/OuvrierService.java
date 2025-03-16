@@ -4,6 +4,8 @@ package ma.epicproject.backend.service.impl;
 import ma.epicproject.backend.common.exception.EntityNotFoundException;
 import ma.epicproject.backend.criteria.OuvrierCriteria;
 import ma.epicproject.backend.dto.OuvrierDto;
+import ma.epicproject.backend.repository.IDemandeRepository;
+import ma.epicproject.backend.repository.IServiceProposeRepository;
 import ma.epicproject.backend.service.IOuvrierService;
 import ma.epicproject.backend.specification.OuvrierSpecification;
 import ma.epicproject.backend.entity.Ouvrier;
@@ -25,6 +27,10 @@ public class OuvrierService implements IOuvrierService {
 
     @Autowired
     private IOuvrierRepository ouvrierRepository;
+    @Autowired
+    private IServiceProposeRepository serviceProposeRepository;
+    @Autowired
+    private IDemandeRepository demandeRepository;
 
 
     /**
@@ -76,6 +82,13 @@ public class OuvrierService implements IOuvrierService {
         if (idList != null)
             for (Long id : idList) {
                 Ouvrier toBeDeleted = ouvrierRepository.findById(id).orElseThrow(() -> new EntityNotFoundException("errors.notFound", new String[] { Ouvrier.class.getSimpleName(), id.toString() }));
+                List<Long> idListServicePropose = serviceProposeRepository.getListServiceProposeIdByOuvrierId(toBeDeleted.getId());
+                if (!(idListServicePropose == null || idListServicePropose.isEmpty())){
+                    for (Long idServicePropose : idListServicePropose){
+                        demandeRepository.deleteByServiceProposeId(idServicePropose);
+                    }
+                }
+                serviceProposeRepository.deleteByOuvrierId(toBeDeleted.getId());
 
                 ouvrierRepository.delete(toBeDeleted);
 

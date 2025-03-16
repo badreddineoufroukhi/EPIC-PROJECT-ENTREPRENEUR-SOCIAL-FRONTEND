@@ -41,9 +41,9 @@ public class Demande extends AuditBusinessObject {
     private Agreement agreement;
 
     @Column(name = Constants.COLUMN_DESCRIPTION)
-    private String Description;
+    private String description;
 
-    public Agreement getRole() {
+    public Agreement getAgreement() {
         return agreement;
     }
 

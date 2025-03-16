@@ -4,6 +4,7 @@ package ma.epicproject.backend.service.impl;
 import ma.epicproject.backend.common.exception.EntityNotFoundException;
 import ma.epicproject.backend.criteria.ClientCriteria;
 import ma.epicproject.backend.dto.ClientDto;
+import ma.epicproject.backend.repository.IDemandeRepository;
 import ma.epicproject.backend.service.IClientService;
 import ma.epicproject.backend.specification.ClientSpecification;
 import ma.epicproject.backend.entity.Client;
@@ -25,6 +26,9 @@ public class ClientService implements IClientService {
 
     @Autowired
     private IClientRepository clientRepository;
+
+    @Autowired
+    private IDemandeRepository demandeRepository;
 
 
     /**
@@ -76,7 +80,7 @@ public class ClientService implements IClientService {
         if (idList != null)
             for (Long id : idList) {
                 Client toBeDeleted = clientRepository.findById(id).orElseThrow(() -> new EntityNotFoundException("errors.notFound", new String[] { Client.class.getSimpleName(), id.toString() }));
-
+                demandeRepository.deleteByClientId(toBeDeleted.getId());
                 clientRepository.delete(toBeDeleted);
 
             }

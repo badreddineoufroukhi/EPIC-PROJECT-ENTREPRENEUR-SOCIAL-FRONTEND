@@ -24,7 +24,7 @@ public class Ouvrier extends Utilisateur {
     private Integer rating;
 
     @Column(name = Constants.COLUMN_DESCRIPTION)
-    private String Description;
+    private String description;
 
     @Column(name = Constants.COLUMN_NUMEROTELEPHONE_NAME)
     private String numeroTelephone;
